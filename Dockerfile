@@ -10,7 +10,7 @@ COPY --chown=node:node package*.json ./
 
 COPY --chown=node:node tsconfig*.json ./
 
-RUN npm run build
+RUN npm ci
 
 COPY --chown=node:node . .
 
