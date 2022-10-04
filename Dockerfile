@@ -8,6 +8,8 @@ WORKDIR /usr/src/app
 
 COPY --chown=node:node package*.json ./
 
+COPY --chown=node:node tsconfig*.json ./
+
 RUN npm ci
 
 COPY --chown=node:node . .
